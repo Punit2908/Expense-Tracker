@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input{
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        input[type="submit"]{
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        option{
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        button{
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit">
+        <h2>Expense Tracker</h2>
+        <label for="amount">Amount</label>
+        <input type="number"  id="amount" placeholder="Enter Amount" required>
+        <br>
+        <label for="ename">Description</label>
+        <input type="text" id="ename" placeholder="Enter Description" required>
+        <br>
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <option value="food">Food</option>
+            <option value="travel">Travel</option>
+            <option value="shopping">Shopping</option>
+            <option value="entertainment">Entertainment</option>
+        </select>
+        <br>
+        <button id="submit">Add Expense</button>
+    </form>
+    <div id="list"></div>
+    <script src="script.js"></script>
+</body>
+</html>
